@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather Result</title>
+ <link rel="stylesheet" href="/css/styles.css" />
+
+</head>
+<body>
+  <% if (error) { %>
+  <h2><%= error %></h2>
+  <a href="/">Try Again</a>
+<% } else if (result) { %>
+  <h1>Weather in <%= result.city %></h1>
+  <h2><%= result.temp %>°C</h2>
+  <p><%= result.desc %></p>
+  <img src="http://openweathermap.org/img/wn/<%= result.icon %>@2x.png" alt="Weather icon" />
+  <a href="/">Check Another</a>
+<% } %>
+
+</body>
+</html>
